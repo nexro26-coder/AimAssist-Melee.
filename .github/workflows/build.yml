@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'aimassist-melee-only-source.zip'
+      - 'aimassist-melee-only-fixed-source.zip'
       - '.github/workflows/build.yml'
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Extract source
         run: |
-          unzip aimassist-melee-only-source.zip -d source
+          unzip aimassist-melee-only-fixed-source.zip -d source
 
       - name: Build JAR
         run: |
