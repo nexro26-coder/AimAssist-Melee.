@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'aimassist-melee-only-fixed-source.zip'
+      - 'aimassist-melee-vertical-hitbox-source.zip'
       - '.github/workflows/build.yml'
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Extract source
         run: |
-          unzip aimassist-melee-only-fixed-source.zip -d source
+          unzip aimassist-melee-vertical-hitbox-source.zip -d source
 
       - name: Build JAR
         run: |
@@ -39,6 +39,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: AimAssist-JAR
-          path: source/aimassist-0.1.0-1.21.11/build/libs/*.jar
+          path: source/aimassist1/build/libs/*.jar
           if-no-files-found: error
           
