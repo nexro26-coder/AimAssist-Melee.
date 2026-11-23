@@ -39,6 +39,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: AimAssist-JAR
-          path: source/aimassist1/build/libs/*.jar
+          path: |
+            source/**/build/libs/*.jar
+            !source/**/*-sources.jar
+            !source/**/*-javadoc.jar
           if-no-files-found: error
           
